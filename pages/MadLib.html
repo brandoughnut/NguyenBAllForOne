@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/output.css" />
+
+    <title>Mad Lib Page</title>
+  </head>
+  <body>
+    <div class="bg-[url(/assets/background.png)] min-h-screen">
+      <div class="hidden sm:block">
+        <!-- Modal toggle -->
+        <div class="flex justify-center py-14">
+          <button
+            data-modal-target="static-modal"
+            data-modal-toggle="static-modal"
+            class="block text-black bg-[#EE8096] font-medium rounded-xl text-sm px-8 py-9 text-center"
+            type="button"
+            style="font-family: Roboto-Bold"
+          >
+            <div class="text-[50px]">Page List</div>
+          </button>
+        </div>
+
+        <!-- Main modal -->
+        <div
+          id="static-modal"
+          data-modal-backdrop="static"
+          tabindex="-1"
+          aria-hidden="true"
+          class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+        >
+          <div class="relative p-4 w-full max-w-sm max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-[#EE8096] rounded-lg shadow">
+              <!-- Modal header -->
+              <div
+                class="flex items-center justify-between p-4 md:p-5 rounded-t dark:border-gray-600"
+              >
+                <button
+                  type="button"
+                  class="text-black bg-transparent rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600"
+                  data-modal-hide="static-modal"
+                >
+                  <svg
+                    class="w-3 h-3"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 14"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                    />
+                  </svg>
+                  <span class="sr-only">Close modal</span>
+                </button>
+              </div>
+              <!-- Modal body -->
+              <div class="text-center pb-10">
+                <a
+                  href="../index.html"
+                  class="text-[25px]"
+                  style="font-family: Roboto-Bold"
+                  ><p class="mb-4">Home</p></a
+                >
+                <a
+                  href="SayHello.html"
+                  class="text-[25px]"
+                  style="font-family: Roboto-Bold"
+                  ><p class="mb-4">Say Hello</p></a
+                >
+                <a
+                  href="Add2Numbers.html"
+                  class="text-[25px]"
+                  style="font-family: Roboto-Bold"
+                  ><p class="mb-4">Add 2 Numbers</p></a
+                >
+                <a
+                  href="AskingQuestions.html"
+                  class="text-[25px]"
+                  style="font-family: Roboto-Bold"
+                  ><p class="mb-4">Asking Questions</p></a
+                >
+                <a
+                  href="GreaterorLess.html"
+                  class="text-[25px]"
+                  style="font-family: Roboto-Bold"
+                  ><p class="mb-4">Greater or Less</p></a
+                >
+                <a
+                  href="MadLib.html"
+                  class="text-[25px]"
+                  style="font-family: Roboto-Bold"
+                  ><p class="mb-4">Mad Lib</p></a
+                >
+                <a
+                  href="OddorEven.html"
+                  class="text-[25px]"
+                  style="font-family: Roboto-Bold"
+                  ><p class="mb-4">Odd or Even</p></a
+                >
+                <a
+                  href="ReverseItWords.html"
+                  class="text-[25px]"
+                  style="font-family: Roboto-Bold"
+                  ><p class="mb-4">Reverse It Words</p></a
+                >
+                <a
+                  href="ReverseItNumbers.html"
+                  class="text-[25px]"
+                  style="font-family: Roboto-Bold"
+                  ><p class="mb-4">Reverse It Numbers</p></a
+                >
+                <a
+                  href="RestaurantPicker.html"
+                  class="text-[25px]"
+                  style="font-family: Roboto-Bold"
+                  ><p class="mb-4">Restaurant Picker</p></a
+                >
+                <a
+                  href="Magic8Ball.html"
+                  class="text-[25px]"
+                  style="font-family: Roboto-Bold"
+                  ><p>Magic 8 Ball</p></a
+                >
+              </div>
+              <!-- Modal footer -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="block sm:hidden">
+        <nav class="">
+          <div
+            class="max-w-screen-xl flex flex-wrap items-center justify-end mx-auto p-4 mb-8 sm:mb-16"
+          >
+            <button
+              data-collapse-toggle="navbar-hamburger"
+              type="button"
+              class="inline-flex items-center justify-center p-2 w-10 h-10 text-sm bg-[#EE8096] rounded-xl"
+              aria-controls="navbar-hamburger"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+            <div class="hidden w-full" id="navbar-hamburger">
+              <ul
+                class="flex flex-col text-center font-medium mt-4 py-5 rounded-lg bg-[#EE8096] dark:bg-gray-800 dark:border-gray-700"
+              >
+                <li>
+                  <a
+                    href="../index.html"
+                    class="block py-4 px-3 text-[25px]"
+                    style="font-family: Roboto-Bold"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="SayHello.html"
+                    class="block py-4 px-3 text-[25px]"
+                    style="font-family: Roboto-Bold"
+                    >Say Hello</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="Add2Numbers.html"
+                    class="block py-4 px-3 text-[25px]"
+                    style="font-family: Roboto-Bold"
+                    >Add 2 Numbers</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="AskingQuestions.html"
+                    class="block py-4 px-3 text-[25px]"
+                    style="font-family: Roboto-Bold"
+                    >Asking Questions</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="GreaterorLess.html"
+                    class="block py-4 px-3 text-[25px]"
+                    style="font-family: Roboto-Bold"
+                    >Greater or Less</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="MadLib.html"
+                    class="block py-4 px-3 text-[25px]"
+                    style="font-family: Roboto-Bold"
+                    >Mad Lib</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="OddorEven.html"
+                    class="block py-4 px-3 text-[25px]"
+                    style="font-family: Roboto-Bold"
+                    >Odd or Even</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="ReverseItWords.html"
+                    class="block py-4 px-3 text-[25px]"
+                    style="font-family: Roboto-Bold"
+                    >Reverse It Words</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="ReverseItNumbers.html"
+                    class="block py-4 px-3 text-[25px]"
+                    style="font-family: Roboto-Bold"
+                    >Reverse It Numbers</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="RestaurantPicker.html"
+                    class="block py-4 px-3 text-[25px]"
+                    style="font-family: Roboto-Bold"
+                    >Restaurant Picker</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="Magic8Ball.html"
+                    class="block py-4 px-3 text-[25px]"
+                    style="font-family: Roboto-Bold"
+                    >Magic 8 Ball</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="text-center mb-8 sm:mb-16">
+        <p
+          class="text-[30px] sm:text-[75px] lg:text-[100px] mb-8 sm:mb-16"
+          style="font-family: Roboto-Bold"
+        >
+          Mad Lib
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 xl:grid-cols-2 justify-center">
+        <div>
+        <div class="text-center mb-8 sm:mb-16">
+          <p
+            class="text-[15px] sm:text-[50px]"
+            style="font-family: Roboto-Bold"
+          >
+            Please enter a name:
+          </p>
+        </div>
+
+        <div class="flex justify-center mb-8 sm:mb-16">
+          <form class="flex items-center">
+            <label for="simple-search" class="sr-only">Search</label>
+            <div class="relative">
+              <input
+                type="text"
+                id="simple-search"
+                class="p-2.5 block w-[139px] sm:w-[460px] text-[15px] py-[2.5px] sm:text-[50px] rounded-lg sm:rounded-2xl border-none sm:py-[19px]"
+                required
+                style="font-family: Roboto-Bold"
+              />
+            </div>
+            <button
+              type="submit"
+              class="sm:p-2.5 ms-3 sm:ms-5 text-sm font-medium text-white focus:outline-none"
+            >
+              <img
+                class="h-[29px] sm:h-auto"
+                src="../assets/submitBtn.png"
+                alt="Submit button"
+              />
+              <span class="sr-only">Search</span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div>
+        <div class="text-center mb-8 sm:mb-16">
+          <p
+            class="text-[15px] sm:text-[50px]"
+            style="font-family: Roboto-Bold"
+          >
+            Please enter a name:
+          </p>
+        </div>
+
+        <div class="flex justify-center mb-8 sm:mb-16">
+          <form class="flex items-center">
+            <label for="simple-search" class="sr-only">Search</label>
+            <div class="relative">
+              <input
+                type="text"
+                id="simple-search"
+                class="p-2.5 block w-[139px] sm:w-[460px] text-[15px] py-[2.5px] sm:text-[50px] rounded-lg sm:rounded-2xl border-none sm:py-[19px]"
+                required
+                style="font-family: Roboto-Bold"
+              />
+            </div>
+            <button
+              type="submit"
+              class="sm:p-2.5 ms-3 sm:ms-5 text-sm font-medium text-white focus:outline-none"
+            >
+              <img
+                class="h-[29px] sm:h-auto"
+                src="../assets/submitBtn.png"
+                alt="Submit button"
+              />
+              <span class="sr-only">Search</span>
+            </button>
+          </form>
+        </div>
+      </div>
+      </div>
+
+      <div class="grid grid-cols-1 xl:grid-cols-2 justify-center">
+        <div>
+        <div class="text-center mb-8 sm:mb-16">
+          <p
+            class="text-[15px] sm:text-[50px]"
+            style="font-family: Roboto-Bold"
+          >
+            Please enter a location:
+          </p>
+        </div>
+
+        <div class="flex justify-center mb-8 sm:mb-16">
+          <form class="flex items-center">
+            <label for="simple-search" class="sr-only">Search</label>
+            <div class="relative">
+              <input
+                type="text"
+                id="simple-search"
+                class="p-2.5 block w-[139px] sm:w-[460px] text-[15px] py-[2.5px] sm:text-[50px] rounded-lg sm:rounded-2xl border-none sm:py-[19px]"
+                required
+                style="font-family: Roboto-Bold"
+              />
+            </div>
+            <button
+              type="submit"
+              class="sm:p-2.5 ms-3 sm:ms-5 text-sm font-medium text-white focus:outline-none"
+            >
+              <img
+                class="h-[29px] sm:h-auto"
+                src="../assets/submitBtn.png"
+                alt="Submit button"
+              />
+              <span class="sr-only">Search</span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div>
+        <div class="text-center mb-8 sm:mb-16">
+          <p
+            class="text-[15px] sm:text-[50px]"
+            style="font-family: Roboto-Bold"
+          >
+            Please enter a time:
+          </p>
+        </div>
+
+        <div class="flex justify-center mb-8 sm:mb-16">
+          <form class="flex items-center">
+            <label for="simple-search" class="sr-only">Search</label>
+            <div class="relative">
+              <input
+                type="text"
+                id="simple-search"
+                class="p-2.5 block w-[139px] sm:w-[460px] text-[15px] py-[2.5px] sm:text-[50px] rounded-lg sm:rounded-2xl border-none sm:py-[19px]"
+                required
+                style="font-family: Roboto-Bold"
+              />
+            </div>
+            <button
+              type="submit"
+              class="sm:p-2.5 ms-3 sm:ms-5 text-sm font-medium text-white focus:outline-none"
+            >
+              <img
+                class="h-[29px] sm:h-auto"
+                src="../assets/submitBtn.png"
+                alt="Submit button"
+              />
+              <span class="sr-only">Search</span>
+            </button>
+          </form>
+        </div>
+      </div>
+      </div>
+
+      <div class="grid grid-cols-1 xl:grid-cols-2 justify-center">
+        <div>
+        <div class="text-center mb-8 sm:mb-16">
+          <p
+            class="text-[15px] sm:text-[50px]"
+            style="font-family: Roboto-Bold"
+          >
+            Please enter a restaurant:
+          </p>
+        </div>
+
+        <div class="flex justify-center mb-8 sm:mb-16">
+          <form class="flex items-center">
+            <label for="simple-search" class="sr-only">Search</label>
+            <div class="relative">
+              <input
+                type="text"
+                id="simple-search"
+                class="p-2.5 block w-[139px] sm:w-[460px] text-[15px] py-[2.5px] sm:text-[50px] rounded-lg sm:rounded-2xl border-none sm:py-[19px]"
+                required
+                style="font-family: Roboto-Bold"
+              />
+            </div>
+            <button
+              type="submit"
+              class="sm:p-2.5 ms-3 sm:ms-5 text-sm font-medium text-white focus:outline-none"
+            >
+              <img
+                class="h-[29px] sm:h-auto"
+                src="../assets/submitBtn.png"
+                alt="Submit button"
+              />
+              <span class="sr-only">Search</span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div>
+        <div class="text-center mb-8 sm:mb-16">
+          <p
+            class="text-[15px] sm:text-[50px]"
+            style="font-family: Roboto-Bold"
+          >
+            Please enter a verb:
+          </p>
+        </div>
+
+        <div class="flex justify-center mb-8 sm:mb-16">
+          <form class="flex items-center">
+            <label for="simple-search" class="sr-only">Search</label>
+            <div class="relative">
+              <input
+                type="text"
+                id="simple-search"
+                class="p-2.5 block w-[139px] sm:w-[460px] text-[15px] py-[2.5px] sm:text-[50px] rounded-lg sm:rounded-2xl border-none sm:py-[19px]"
+                required
+                style="font-family: Roboto-Bold"
+              />
+            </div>
+            <button
+              type="submit"
+              class="sm:p-2.5 ms-3 sm:ms-5 text-sm font-medium text-white focus:outline-none"
+            >
+              <img
+                class="h-[29px] sm:h-auto"
+                src="../assets/submitBtn.png"
+                alt="Submit button"
+              />
+              <span class="sr-only">Search</span>
+            </button>
+          </form>
+        </div>
+      </div>
+      </div>
+
+      <div class="grid grid-cols-1 xl:grid-cols-2 justify-center">
+        <div>
+        <div class="text-center mb-8 sm:mb-16">
+          <p
+            class="text-[15px] sm:text-[50px]"
+            style="font-family: Roboto-Bold"
+          >
+            Please enter a number:
+          </p>
+        </div>
+
+        <div class="flex justify-center mb-8 sm:mb-16">
+          <form class="flex items-center">
+            <label for="simple-search" class="sr-only">Search</label>
+            <div class="relative">
+              <input
+                type="text"
+                id="simple-search"
+                class="p-2.5 block w-[139px] sm:w-[460px] text-[15px] py-[2.5px] sm:text-[50px] rounded-lg sm:rounded-2xl border-none sm:py-[19px]"
+                required
+                style="font-family: Roboto-Bold"
+              />
+            </div>
+            <button
+              type="submit"
+              class="sm:p-2.5 ms-3 sm:ms-5 text-sm font-medium text-white focus:outline-none"
+            >
+              <img
+                class="h-[29px] sm:h-auto"
+                src="../assets/submitBtn.png"
+                alt="Submit button"
+              />
+              <span class="sr-only">Search</span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div>
+        <div class="text-center mb-8 sm:mb-16">
+          <p
+            class="text-[15px] sm:text-[50px]"
+            style="font-family: Roboto-Bold"
+          >
+            Please enter a tool:
+          </p>
+        </div>
+
+        <div class="flex justify-center mb-8 sm:mb-16">
+          <form class="flex items-center">
+            <label for="simple-search" class="sr-only">Search</label>
+            <div class="relative">
+              <input
+                type="text"
+                id="simple-search"
+                class="p-2.5 block w-[139px] sm:w-[460px] text-[15px] py-[2.5px] sm:text-[50px] rounded-lg sm:rounded-2xl border-none sm:py-[19px]"
+                required
+                style="font-family: Roboto-Bold"
+              />
+            </div>
+            <button
+              type="submit"
+              class="sm:p-2.5 ms-3 sm:ms-5 text-sm font-medium text-white focus:outline-none"
+            >
+              <img
+                class="h-[29px] sm:h-auto"
+                src="../assets/submitBtn.png"
+                alt="Submit button"
+              />
+              <span class="sr-only">Search</span>
+            </button>
+          </form>
+        </div>
+      </div>
+      </div>
+
+      <div class="grid grid-cols-1 xl:grid-cols-2 justify-center">
+        <div>
+        <div class="text-center mb-8 sm:mb-16">
+          <p
+            class="text-[15px] sm:text-[50px]"
+            style="font-family: Roboto-Bold"
+          >
+            Please enter an animal:
+          </p>
+        </div>
+
+        <div class="flex justify-center mb-8 sm:mb-16">
+          <form class="flex items-center">
+            <label for="simple-search" class="sr-only">Search</label>
+            <div class="relative">
+              <input
+                type="text"
+                id="simple-search"
+                class="p-2.5 block w-[139px] sm:w-[460px] text-[15px] py-[2.5px] sm:text-[50px] rounded-lg sm:rounded-2xl border-none sm:py-[19px]"
+                required
+                style="font-family: Roboto-Bold"
+              />
+            </div>
+            <button
+              type="submit"
+              class="sm:p-2.5 ms-3 sm:ms-5 text-sm font-medium text-white focus:outline-none"
+            >
+              <img
+                class="h-[29px] sm:h-auto"
+                src="../assets/submitBtn.png"
+                alt="Submit button"
+              />
+              <span class="sr-only">Search</span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div>
+        <div class="text-center mb-8 sm:mb-16">
+          <p
+            class="text-[15px] sm:text-[50px]"
+            style="font-family: Roboto-Bold"
+          >
+            Please enter a color:
+          </p>
+        </div>
+
+        <div class="flex justify-center mb-8 sm:mb-16">
+          <form class="flex items-center">
+            <label for="simple-search" class="sr-only">Search</label>
+            <div class="relative">
+              <input
+                type="text"
+                id="simple-search"
+                class="p-2.5 block w-[139px] sm:w-[460px] text-[15px] py-[2.5px] sm:text-[50px] rounded-lg sm:rounded-2xl border-none sm:py-[19px]"
+                required
+                style="font-family: Roboto-Bold"
+              />
+            </div>
+            <button
+              type="submit"
+              class="sm:p-2.5 ms-3 sm:ms-5 text-sm font-medium text-white focus:outline-none"
+            >
+              <img
+                class="h-[29px] sm:h-auto"
+                src="../assets/submitBtn.png"
+                alt="Submit button"
+              />
+              <span class="sr-only">Search</span>
+            </button>
+          </form>
+        </div>
+      </div>
+      </div>
+
+      
+
+      <div class="text-center pb-52">
+        <p class="text-[15px] sm:text-[50px]" style="font-family: Roboto-Bold">
+          Placeholder text
+        </p>
+      </div>
+    </div>
+
+    <script src="/node_modules/flowbite/dist/flowbite.min.js"></script>
+  </body>
+</html>
