@@ -1621,6 +1621,10 @@ input:checked + .toggle-bg {
   padding-top: 0.5rem;
 }
 
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1966,6 +1970,10 @@ input:checked + .toggle-bg {
   .sm\:py-\[19px\] {
     padding-top: 19px;
     padding-bottom: 19px;
+  }
+
+  .sm\:pb-16 {
+    padding-bottom: 4rem;
   }
 
   .sm\:text-\[100px\] {
