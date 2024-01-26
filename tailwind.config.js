@@ -4,7 +4,8 @@ module.exports = {
     "./src/**/*.{html,js}",
     "./*.{html,js}",
     "./node_modules/flowbite/**/*.js",
-    "./pages/**/*.html"
+    "./pages/**/*.html",
+    "./index/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {},
